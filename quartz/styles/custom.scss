@@ -1,3 +1,151 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+// Nord 主题配色, 完全看不成
+:root {
+  --nord0: #2E3440;
+  --nord1: #3B4252;
+  --nord2: #434C5E;
+  --nord3: #4C566A;
+  --nord4: #D8DEE9;
+  --nord5: #E5E9F0;
+  --nord6: #ECEFF4;
+  --nord7: #8FBCBB;
+  --nord8: #88C0D0;
+  --nord9: #81A1C1;
+  --nord10: #5E81AC;
+  --nord11: #BF616A;
+  --nord12: #D08770;
+  --nord13: #EBCB8B;
+  --nord14: #A3BE8C;
+  --nord15: #B48EAD;
+}
+
+// 覆盖 Quartz 默认变量
+:root {
+  --light: var(--nord6);
+  --dark: var(--nord0);
+  --secondary: var(--nord8);
+  --tertiary: var(--nord9);
+  --gray: var(--nord4);
+  --darkgray: var(--nord1);
+  --lightgray: var(--nord3);
+  --highlight: rgba(136, 192, 208, 0.15);
+}
+
+// 页面背景
+body {
+  background-color: var(--nord0);
+  color: var(--nord4);
+}
+
+// 链接
+a {
+  color: var(--nord8);
+  
+  &:hover {
+    color: var(--nord7);
+  }
+}
+
+// 标题
+h1, h2, h3, h4, h5, h6 {
+  color: var(--nord6);
+}
+
+// 代码块
+pre {
+  background-color: var(--nord1) !important;
+  border: 1px solid var(--nord3);
+}
+
+code {
+  background-color: var(--nord1);
+  color: var(--nord11);
+}
+
+// 引用块
+blockquote {
+  border-left: 3px solid var(--nord8);
+  background-color: var(--nord1);
+  color: var(--nord4);
+}
+
+// 表格
+table {
+  border-color: var(--nord3);
+  
+  th {
+    background-color: var(--nord1);
+    color: var(--nord6);
+  }
+  
+  td {
+    border-color: var(--nord3);
+  }
+  
+  tr:nth-child(even) {
+    background-color: var(--nord1);
+  }
+}
+
+// 侧边栏
+.sidebar {
+  background-color: var(--nord1);
+}
+
+// 搜索框
+.search-button {
+  background-color: var(--nord1);
+  border: 1px solid var(--nord3);
+  
+  input {
+    color: var(--nord4);
+  }
+}
+
+// 标签
+a.tag {
+  background-color: var(--nord1);
+  color: var(--nord8);
+  border: 1px solid var(--nord3);
+}
+
+// 高亮
+mark {
+  background-color: var(--nord13);
+  color: var(--nord0);
+}
+
+// 分割线
+hr {
+  border-color: var(--nord3);
+}
+
+// 图谱视图背景
+.graph-outer {
+  background-color: var(--nord1);
+}
+
+// 目录当前项高亮
+.toc-content a.active {
+  color: var(--nord8);
+}
+
+// 滚动条
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nord0);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nord3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nord4);
+}
